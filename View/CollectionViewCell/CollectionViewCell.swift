@@ -8,21 +8,37 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var historyPicture: UIImageView!
     @IBOutlet weak var rows: UIImageView!
     
     var collectionViewCellArray = [CollectionViewCell]()
-    static var identifier2: String {
-        return String(describing: self)}
+    
+    static var identifier: String {
+        return String(describing: self)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        historyPicture.layer.cornerRadius = 8 // Corner radius değerini ayarlayın
-                historyPicture.layer.masksToBounds = true // Köşe yuvarlatma için mask kullanın
+        historyPicture.layer.cornerRadius = 8
+        historyPicture.layer.masksToBounds = true 
     }
-    public func populate(with model: CollectionViewCellModel){
-        historyPicture.image = model.historyPicture
-        rows.image = model.rows
+    
+    public func populate(data: DummyDataImages){
+            
+        var image = UIImage()
+        
+        switch data.order {
+        case 0:
+            image = UIImage(named: "1st")!
+        case 1:
+            image = UIImage(named: "2nd")!
+        case 2:
+            image = UIImage(named: "3rd")!
+        default:
+            image = UIImage(named: "1st")!
+        }
+        
+        rows.image = image
     }
 }

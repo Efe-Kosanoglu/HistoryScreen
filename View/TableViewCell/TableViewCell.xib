@@ -28,19 +28,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="327" height="184"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soh-9E-a2L">
-                        <rect key="frame" x="20.000000000000004" y="20" width="37.333333333333343" height="18.333333333333329"/>
+                        <rect key="frame" x="20.000000000000004" y="20" width="37.333333333333343" height="19"/>
                         <fontDescription key="fontDescription" name="DMSans18pt-Bold" family="DM Sans 18pt" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL4-gg-GyM">
-                        <rect key="frame" x="273.33333333333331" y="22" width="33.666666666666686" height="16"/>
+                        <rect key="frame" x="273.33333333333331" y="22" width="33.666666666666686" height="17"/>
                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
                         <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="HLO-gQ-tat">
-                        <rect key="frame" x="255.33333333333337" y="22" width="16" height="16"/>
+                        <rect key="frame" x="255.33333333333337" y="22" width="16" height="17"/>
                     </imageView>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="D5L-dW-nYR">
                         <rect key="frame" x="20" y="52" width="287" height="110"/>
@@ -65,28 +65,32 @@
                 </subviews>
                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="UL4-gg-GyM" firstAttribute="leading" secondItem="HLO-gQ-tat" secondAttribute="trailing" constant="1.9999999999998863" id="3Wt-bi-Hij"/>
                     <constraint firstItem="Zpa-7U-VDP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4kc-UE-dhH"/>
-                    <constraint firstItem="UL4-gg-GyM" firstAttribute="leading" secondItem="HLO-gQ-tat" secondAttribute="trailing" constant="2" id="4ko-Tn-xlp"/>
                     <constraint firstAttribute="bottom" secondItem="D5L-dW-nYR" secondAttribute="bottom" constant="38" id="Aaw-xM-Xov"/>
-                    <constraint firstAttribute="trailing" secondItem="UL4-gg-GyM" secondAttribute="trailing" constant="20" id="B5o-Ja-PMq"/>
-                    <constraint firstItem="Soh-9E-a2L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="BaE-Kj-x3J"/>
                     <constraint firstAttribute="trailing" secondItem="D5L-dW-nYR" secondAttribute="trailing" constant="20" id="GgR-Y0-FJf"/>
-                    <constraint firstItem="UL4-gg-GyM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="I1D-QR-pHe"/>
+                    <constraint firstItem="D5L-dW-nYR" firstAttribute="top" secondItem="HLO-gQ-tat" secondAttribute="bottom" constant="13" id="HnM-Sy-0xx"/>
                     <constraint firstItem="HLO-gQ-tat" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="LpS-p3-4vB"/>
                     <constraint firstAttribute="trailing" secondItem="Zpa-7U-VDP" secondAttribute="trailing" id="Oe8-Q9-6DY"/>
-                    <constraint firstItem="Soh-9E-a2L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cGC-z6-S8k"/>
+                    <constraint firstItem="UL4-gg-GyM" firstAttribute="bottom" secondItem="HLO-gQ-tat" secondAttribute="bottom" id="Uyc-mX-JTn"/>
+                    <constraint firstItem="UL4-gg-GyM" firstAttribute="top" secondItem="HLO-gQ-tat" secondAttribute="top" id="V5y-KQ-J4d"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UL4-gg-GyM" secondAttribute="trailing" constant="5.6843418860808015e-14" id="j4s-fl-iXR"/>
+                    <constraint firstItem="Soh-9E-a2L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-50" id="phF-EN-pQI"/>
+                    <constraint firstItem="HLO-gQ-tat" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="qro-yC-fUc"/>
                     <constraint firstAttribute="bottom" secondItem="Zpa-7U-VDP" secondAttribute="bottom" constant="16" id="qyM-64-W2X"/>
                     <constraint firstItem="D5L-dW-nYR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="srt-DP-uqc"/>
                     <constraint firstItem="Zpa-7U-VDP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wAL-cI-t9F"/>
+                    <constraint firstItem="Soh-9E-a2L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="xHK-oR-WJF"/>
+                    <constraint firstItem="Soh-9E-a2L" firstAttribute="leading" secondItem="D5L-dW-nYR" secondAttribute="leading" id="zCf-fg-Jup"/>
+                    <constraint firstItem="Soh-9E-a2L" firstAttribute="bottom" secondItem="HLO-gQ-tat" secondAttribute="bottom" id="zix-BC-bvX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="cellBackground" destination="Zpa-7U-VDP" id="2TZ-S0-FGL"/>
-                <outlet property="clockImage" destination="HLO-gQ-tat" id="a4G-hZ-fcY"/>
                 <outlet property="collectionView" destination="D5L-dW-nYR" id="ATP-oz-fuz"/>
-                <outlet property="timeLabel" destination="UL4-gg-GyM" id="y44-nF-QWh"/>
+                <outlet property="dateLabel" destination="Soh-9E-a2L" id="YKW-MX-HEa"/>
+                <outlet property="timeLabel" destination="UL4-gg-GyM" id="eSb-ed-bcu"/>
             </connections>
             <point key="canvasLocation" x="122.90076335877862" y="39.436619718309863"/>
         </tableViewCell>

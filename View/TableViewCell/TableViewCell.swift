@@ -9,12 +9,11 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    @IBOutlet weak var cellBackground: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var clockImage: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var data: DummyData!
     var cellType: MainCellType = .quadruple
     
     static var identifier: String {
@@ -23,28 +22,27 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let cellNib = UINib(nibName: CollectionViewCell.identifier2, bundle: nil)
-        self.collectionView.register(cellNib, forCellWithReuseIdentifier: CollectionViewCell.identifier2)
+        self.collectionView.register(UINib(nibName: CollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.identifier)
     }
     
-    public func populate(with model: TableViewCellModel){
-        dateLabel.text = model.dateLabel
-        timeLabel.text = model.timeLabel
-        clockImage.image = model.clockImage
-        cellBackground.image = model.cellBackground
-        collectionView.dataSource = self
+    public func populate(data: DummyData){
+        self.dateLabel.text = data.date
+        self.timeLabel.text = data.time
+        self.data = data
     }
 }
 
 extension TableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 33
+        return self.data.images.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier2, for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
+        cell.populate(data: data.images[indexPath.row])
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch cellType {
         case .trilogy:
@@ -52,5 +50,8 @@ extension TableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, U
         case .quadruple:
             return quadruple.cellSize
         }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 6
     }
 }

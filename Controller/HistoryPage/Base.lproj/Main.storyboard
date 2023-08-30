@@ -8,51 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="pLl-HN-a4f">
-            <objects>
-                <tableViewController id="3Kq-n7-hI7" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5Fw-Lk-KxD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qqf-Mv-6mf">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qqf-Mv-6mf" id="QrT-0j-VwP">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="3Kq-n7-hI7" id="7az-Od-3Yp"/>
-                            <outlet property="delegate" destination="3Kq-n7-hI7" id="1RK-cc-kuJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="DIl-NW-gjz"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yCF-n5-HfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-709" y="-20"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="JEe-XF-xzy">
-            <objects>
-                <navigationController id="DKk-lm-LtQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mlP-eF-1Wa">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="3Kq-n7-hI7" kind="relationship" relationship="rootViewController" id="0ht-cj-vyo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lid-kH-TJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1614" y="-20"/>
-        </scene>
         <!--Main History Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -65,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qyq-PU-rLo">
-                                <rect key="frame" x="33" y="59" width="327" height="759"/>
+                                <rect key="frame" x="33" y="115" width="327" height="703"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,9 +30,15 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="9bi-0E-zTd"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAc-AU-xKv">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOS-vp-Vgp">
+                                <rect key="frame" x="0.0" y="55" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="History" id="XV7-kT-80O"/>
+                                </items>
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,19 +49,16 @@
                             <constraint firstItem="AaF-of-tZ2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fdm-mY-2WY"/>
                             <constraint firstItem="Qyq-PU-rLo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="G3H-M5-sKH"/>
                             <constraint firstItem="AaF-of-tZ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GUe-7b-XMd"/>
-                            <constraint firstItem="Qyq-PU-rLo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fBW-B6-rKH"/>
+                            <constraint firstItem="Qyq-PU-rLo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="fBW-B6-rKH"/>
                             <constraint firstItem="AaF-of-tZ2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nQa-Zn-ZBQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qyq-PU-rLo" secondAttribute="bottom" id="r1w-Zs-H2y"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="navBar" destination="qOS-vp-Vgp" id="E1j-El-1wB"/>
                         <outlet property="tableView" destination="Qyq-PU-rLo" id="aQL-Fa-M5U"/>
                     </connections>
                 </viewController>
-                <navigationBar contentMode="scaleToFill" id="bOp-B9-BhO">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                </navigationBar>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>

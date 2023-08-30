@@ -18,12 +18,12 @@ struct trilogy {
     }
 }
 struct quadruple {
-    static let itemSpacing: CGFloat = 1
-    static let numberOfColumns: CGFloat = 5
-    
+    static let itemSpacing: CGFloat = 90
+    static let numberOfColumns: CGFloat = 4
     static var cellSize: CGSize {
         let collectionViewWidth = UIScreen.main.bounds.width
         let cellWidth = (collectionViewWidth - itemSpacing * (numberOfColumns - 1)) / numberOfColumns
-        return CGSize(width: cellWidth, height: 110)
+        return CGSize(width: cellWidth, height: 66)
     }
 }
+
