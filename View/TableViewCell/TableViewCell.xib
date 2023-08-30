@@ -33,12 +33,6 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL4-gg-GyM">
-                        <rect key="frame" x="273.33333333333331" y="22" width="33.666666666666686" height="17"/>
-                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
-                        <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="HLO-gQ-tat">
                         <rect key="frame" x="255.33333333333337" y="22" width="16" height="17"/>
                     </imageView>
@@ -62,20 +56,25 @@
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="MbP-4C-ugq"/>
                         </connections>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL4-gg-GyM">
+                        <rect key="frame" x="273.33333333333331" y="22" width="33.666666666666686" height="17"/>
+                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="UL4-gg-GyM" firstAttribute="leading" secondItem="HLO-gQ-tat" secondAttribute="trailing" constant="1.9999999999998863" id="3Wt-bi-Hij"/>
                     <constraint firstItem="Zpa-7U-VDP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4kc-UE-dhH"/>
+                    <constraint firstItem="UL4-gg-GyM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="7pe-W5-JEN"/>
+                    <constraint firstItem="D5L-dW-nYR" firstAttribute="top" secondItem="UL4-gg-GyM" secondAttribute="bottom" constant="13" id="7vD-O8-Ufe"/>
+                    <constraint firstItem="UL4-gg-GyM" firstAttribute="leading" secondItem="HLO-gQ-tat" secondAttribute="trailing" constant="2" id="A8N-dY-JPe"/>
                     <constraint firstAttribute="bottom" secondItem="D5L-dW-nYR" secondAttribute="bottom" constant="38" id="Aaw-xM-Xov"/>
                     <constraint firstAttribute="trailing" secondItem="D5L-dW-nYR" secondAttribute="trailing" constant="20" id="GgR-Y0-FJf"/>
                     <constraint firstItem="D5L-dW-nYR" firstAttribute="top" secondItem="HLO-gQ-tat" secondAttribute="bottom" constant="13" id="HnM-Sy-0xx"/>
                     <constraint firstItem="HLO-gQ-tat" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="LpS-p3-4vB"/>
+                    <constraint firstAttribute="trailing" secondItem="UL4-gg-GyM" secondAttribute="trailing" constant="20" id="MyX-C8-42f"/>
                     <constraint firstAttribute="trailing" secondItem="Zpa-7U-VDP" secondAttribute="trailing" id="Oe8-Q9-6DY"/>
-                    <constraint firstItem="UL4-gg-GyM" firstAttribute="bottom" secondItem="HLO-gQ-tat" secondAttribute="bottom" id="Uyc-mX-JTn"/>
-                    <constraint firstItem="UL4-gg-GyM" firstAttribute="top" secondItem="HLO-gQ-tat" secondAttribute="top" id="V5y-KQ-J4d"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="UL4-gg-GyM" secondAttribute="trailing" constant="5.6843418860808015e-14" id="j4s-fl-iXR"/>
-                    <constraint firstItem="Soh-9E-a2L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-50" id="phF-EN-pQI"/>
                     <constraint firstItem="HLO-gQ-tat" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="qro-yC-fUc"/>
                     <constraint firstAttribute="bottom" secondItem="Zpa-7U-VDP" secondAttribute="bottom" constant="16" id="qyM-64-W2X"/>
                     <constraint firstItem="D5L-dW-nYR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="srt-DP-uqc"/>

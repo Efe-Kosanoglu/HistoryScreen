@@ -14,7 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var data: DummyData!
-    var cellType: MainCellType = .quadruple
+    var cellType: MainCellType = .trilogy
     
     static var identifier: String {
         return String(describing: self)
